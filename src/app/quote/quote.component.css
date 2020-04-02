@@ -1,0 +1,28 @@
+h1{
+    text-align: center;
+    padding-top: 0px;
+    font-family: 'Nosifer';
+
+}
+h2{
+    text-align: center;
+    color: rgb(55, 66, 66);
+}
+.jumbotron{
+    background-color: rgb(55, 66, 66);
+    color: beige;
+    height: 150px;
+    width: 100%;
+}
+#box{
+    text-align: center;
+    color: black;
+    text-shadow: 2px 2px 4px #000;
+    font-size: 1.3em; 
+}
+.container{
+    background-color: rgb(219, 219, 241);
+}
+.card-footer{
+    text-align: center;
+}

@@ -1,0 +1,38 @@
+<div>
+    <div class="container">
+        <div class="jumbotron">
+            <h1><img src="https://img.icons8.com/dusk/64/000000/quote-left.png" /><strong>GET INSPIRED</strong></h1>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-6">
+                <h2>QUOTES</h2>
+                <hr>
+                <div id='box'>
+                <div *ngFor='let quote of quote;let i =index'>
+                    <p> {{ quote.name }}
+                        <br>
+                        <a href="#" class="btn btn-info btn-lg">
+                            <span class="glyphicon glyphicon-thumbs-up"></span> Like
+                          </a>
+                        <br>
+                        <button (click)='toggleDetails(i)' class="btn btn-primary">Show Details</button>
+                        <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'
+                            (isComplete)='deleteQuote($event,i)' ></app-quote-detail>
+                            
+                    </p>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+            </div>
+        </div>
+        <p *ngIf='quote.length >5'>Your quotes are too many</p>
+
+        <div class="card-footer">
+            <p>copyright © shilla Web Designs.</p>  
+        </div>
+    </div>
+    
+</div>
