@@ -14,6 +14,11 @@ export class QuoteDetailComponent implements OnInit {
     quoteDelete(complete:boolean){
       this.isComplete.emit(complete)
     }
+
+  // @Input() textName : number;
+
+  // quote.clickCounter :number =0;
+
   constructor() { }
 
   ngOnInit(): void {

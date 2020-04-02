@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input} from '@angular/core';
 // import { Quote } from './quote';
 import { Quote } from '../quote';
 
@@ -20,6 +20,7 @@ export class QuoteComponent implements OnInit {
   toggleDetails(index){
     this.quote[index].showDescription = !this.quote[index].showDescription;
   }
+
   // completeGoal(isComplete, index){
   //   if (isComplete) {
   //     this.quote.splice(index,1);
@@ -40,34 +41,19 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
-  numberOfLikes : number=0;
-  numberOfDislikes =0;
-
-  likeButtonClick(i) {
-    this.quote[i].numberOfLikes++;
+  @Input() clickCounter: number;
+  countClick(quote) {
+    quote.clickCounter = quote.clickCounter ++;
   }
-
-  
-
-  dislikeButtonClick(i) {
-    this.quote[i].numberOfDislikes++;
-  }
-
-  preNum:number
-  lastNum:number
-  counter:number
-
-  highestUpvote(){
-    this.preNum = 0
-    this.lastNum = 0
-
-    for(this.counter=0 ; this.counter < this.quote.length; this.counter++) {
-      this.lastNum = this.quote[this.counter].numberOfLikes;
-      if(this.lastNum > this.preNum){this.preNum = this.lastNum}
-    }
-    return  this.preNum
+  countDislike(quote) {
+    quote.dislikeCounter = quote.dislikeCounter ++;
   }
  
+  
+
+ 
+
+
 
   constructor() { }
 
