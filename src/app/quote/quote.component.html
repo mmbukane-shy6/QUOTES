@@ -16,12 +16,12 @@
                             <p> {{ quote.name }}
                                 <br>
                                 <a href="#" onclick="event.preventDefault()" (click)="countClick(quote)">
-                                    <i class="fa fa-thumbs-up pr-1  ml-4 like" ng-click="count = count + 1"
+                                    <i class="fa fa-thumbs-up pr-1  ml-4 like" ng-click="count = count ++"
                                         ng-init="count=0" style="color:blue;"></i>
                                 </a>
                                 <span class="m-4">{{ quote.clickCounter }}</span>
                                 <a href="#" onclick="event.preventDefault()" (click)="countDislike(quote)">
-                                    <i class="fa fa-thumbs-down pr-1 dislike" ng-click="count = count + 1"
+                                    <i class="fa fa-thumbs-down pr-1 dislike" ng-click="count = count ++"
                                         ng-init="count=0" style="color:red;"></i>
                                 </a>
                                 <span class="m-4">{{ quote.dislikeCounter }}</span>

@@ -21,6 +21,7 @@ export class QuoteComponent implements OnInit {
     this.quote[index].showDescription = !this.quote[index].showDescription;
   }
 
+
   addNewQuote(quote){
     let quoteLength = this.quote.length;
    quote.id = quoteLength+1;
@@ -36,7 +37,7 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
-  @Input() clickCounter: number;
+  // @Input() clickCounter: number;
   countClick(quote) {
     quote.clickCounter = quote.clickCounter ++;
   }
