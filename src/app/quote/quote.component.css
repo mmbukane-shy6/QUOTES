@@ -1,13 +1,13 @@
 h1{
     text-align: center;
     padding-top: 0px;
-    font-family: 'Nosifer', cursive;
     font-size: 50px;
 
 }
 h2{
     text-align: center;
     color: rgb(55, 66, 66);
+    font-family: 'Nosifer', cursive;
 }
 .jumbotron{
     background-color: rgb(55, 66, 66);
